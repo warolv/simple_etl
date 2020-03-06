@@ -23,26 +23,25 @@ const pubsub = new PubSub();
  * @param {object} res Cloud Function response context.
  */
 exports.publish = async (req, res) => {
-  if (!req.body.topic || !req.body.message) {
+  if (!req.body.m1 && !req.body.m2 && !req.body.m3) {
     res
       .status(500)
       .send(
-        'Missing parameter(s); include "topic" and "subscription" properties in your request.'
+        'Missing parameter(s); include "m1" or "m2" or "m3" properties in your request.'
       );
     return;
   }
-
+  
+  var m1 = req.body.m1 || "No text";
+  var m2 = req.body.m2 || "No text";
+  var m3 = req.body.m3 || "No text";
+  
   console.log(`Publishing message to topic ${req.body.topic}`);
 
   // References an existing topic
-  const topic = pubsub.topic(req.body.topic);
+  const topic = pubsub.topic('ALL_REQUESTS');
 
-  const messageObject = {
-    data: {
-      message: req.body.message,
-    },
-  };
-  const messageBuffer = Buffer.from(JSON.stringify(messageObject), 'utf8');
+  const messageBuffer = Buffer.from(JSON.stringify({"m1": m1, "m2": m2, "m3": m3}), 'utf8');
 
   // Publishes a message
   try {
