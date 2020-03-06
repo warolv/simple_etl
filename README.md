@@ -26,10 +26,13 @@
         curl -X POST "https://us-central1-simple-etl-270310.cloudfunctions.net/publish" -H "Content-Type:application/json" --data '{"topic":"ALL_REQUESTS","message":"Send 1st request using CURL!"}'
 
 ## Screenshots for step 1
-[Created cloud function](images/1.png)
-[Created pubsub topic](images/2.png)
-[Created subscription to view topic messages](images/3.png)
-[View first and second sent messages](images/4.png)
+![Created cloud function](images/1.png)
+
+![Created pubsub topic](images/2.png)
+
+![Created subscription to view topic messages](images/3.png)
+
+![View first and second sent messages](images/4.png)
 
 
 
