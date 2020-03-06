@@ -71,9 +71,9 @@ Result I see in bigquery:
 ## Problems I struggled with during second step
 
 1. Created a dataflow job without a storage bucket which obviously not worked properly.
-2. Not so easy debugging - when you sent request with curl, but nothing comes to bigquery and you see messages in pubsub:
+2. Not so easy debugging - when you sent a request with curl, but nothing comes to bigquery and you see messages in pubsub:
 
-        - Looking through worker logs of dataflow job and job logs a bit helped.
-        - Find out that 'requests_errors' table automatically created and updated with data which not pushed to regular table which is 'requests', then you can see actual error why data not pushed to needed table
-3. After finding 'requests_errors' table I knew that data not actually coming on format I wanted - so I did changes in 'cloud function' and deployed it again.
+        * Looking through worker logs of dataflow job and job logs a bit helped.
+        * Find out that 'requests_errors' table automatically created and updated with data which not pushed to regular table which is 'requests', then you can see actual error why data not pushed to needed table
+3. After finding 'requests_errors' table I knew that data not actually coming in format I wanted - so I did changes in 'cloud function' and deployed it again.
 
