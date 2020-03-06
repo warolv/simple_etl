@@ -47,13 +47,13 @@
         Go to google console -> storage -> browser and add a new bucket
 
 
-        ![Created bucket](images/7.png)
+![Created bucket](images/7.png)
 
 3. Create google dataflow job for streaming from pubsub to bigquery
  ![Created bucket](images/7.png)
 
-        ![Created dataflow job](images/6.png)
-        ![Created dataflow job](images/5.png)
+![Created dataflow job](images/6.png)
+![Created dataflow job](images/5.png)
 
 4. Testing ETL
 
@@ -65,5 +65,5 @@ curl -X POST "https://us-central1-simple-etl-270310.cloudfunctions.net/publish" 
 
 Result I see in bigquery:
         
-        ![Big Query result](images/8.png)
+![Big Query result](images/8.png)
 
