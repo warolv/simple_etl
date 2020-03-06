@@ -35,6 +35,7 @@
 ![View first and second sent messages](images/4.png)
 
 
+
 ## Step 2 - Create a Dataflow job that reads from this topic subscription, and write it into bigquery table.
 
 1. Create a dataset and table in BigQuery via google console
@@ -50,9 +51,9 @@
 ![Created bucket](images/7.png)
 
 3. Create google dataflow job for streaming from pubsub to bigquery
- ![Created bucket](images/7.png)
 
 ![Created dataflow job](images/6.png)
+
 ![Created dataflow job](images/5.png)
 
 4. Testing ETL
