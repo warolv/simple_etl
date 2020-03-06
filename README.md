@@ -1,3 +1,6 @@
+
+![etl diagramm](images/10.png)
+
 # Build a basic data "ETL" like, using GCP capabilities.
 
 ## Step 1 - HTTP server that listen to requests, get them as-is, and write them into google pubsub topic
