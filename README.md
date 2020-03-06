@@ -35,6 +35,12 @@
 ![View first and second sent messages](images/4.png)
 
 
+## Problems I struggled with during first step
+
+1. 'Cloud Function' deploy problems, a different errors caused but many changes I made to nodejs script
+
+2. Debugging of pubsub to check if messages coming is not so obvious, I didn't saw a pull button at first on 'view messages'  
+
 
 ## Step 2 - Create a Dataflow job that reads from this topic subscription, and write it into bigquery table.
 
